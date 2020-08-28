@@ -10,5 +10,5 @@ sitemap:
 
 <div id="describe-text">
 	<p>这是一篇记载了我正在学习有关前端的知识内容</p>
-	<p><strong> <a href="https://github.com/knhash/Pudhina"> repository</a> </strong></p>
+	
 </div>
