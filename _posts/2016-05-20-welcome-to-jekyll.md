@@ -3,7 +3,7 @@ layout: page
 title:  "如何使用GitHub创建一个属于自己的博客（一）"
 subtitle: "如何使用GitHub创建一个属于自己的博客（一）"
 date:   2020-08-29 21:21:21 +0530
-categories: ["junk"]
+categories: ["general "]
 ---
 # 一、Git是什么
 Git，全称是分布式版本控制系统,可以有效、高速的处理从很小到非常大的项目版本管理。<br>每个开发者可以通过克隆**git clone**,在本地机器上拷贝一个完整的**Git**仓库。
