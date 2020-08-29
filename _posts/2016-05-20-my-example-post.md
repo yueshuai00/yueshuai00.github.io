@@ -1,16 +1,19 @@
 ---
 layout: page
-title:  "CSDN"
-subtitle: "A longer explanation of stuff"
+title:  "如何使用GitHub创建一个属于自己的博客"
+subtitle: "如何使用GitHub创建一个属于自己的博客（一）"
 date:   2020-08-28 21:21:21 +0530
 categories: ["general"]
 ---
 
-Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.
-
-{% comment %}
-Might you have an include in your theme? Why not try it here!
-{% include my-themes-great-include.html %}
-{% endcomment %}
-
-No laudem altera adolescens has, volumus lucilius eum no. Eam ei nulla audiam efficiantur. Suas affert per no, ei tale nibh sea. Sea ne magna harum, in denique scriptorem sea, cetero alienum tibique ei eos. Labores persequeris referrentur eos ei.
+# 一、Git是什么
+Git，全称是分布式版本控制系统,可以有效、高速的处理从很小到非常大的项目版本管理。每个开发者可以通过克隆**git clone**,在本地机器上拷贝一个完整的**Git**仓库。
+# 二、安装Git
+- 点击此链接[Git官网](https://www.baidu.com/link?url=86K1yKQ18j0pylXbdLesYiM3IKL6CUzaY2cwaA6fM_K&wd=&eqid=8433df2900011665000000065f4a4923)进入到Git官网下载并且安装Git
+- 点击Downloads选择你所需要的版本进行下载
+![Git下载图片](https://img-blog.csdnimg.cn/20200828210639732.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
+- 下载安装之后，你会在任意一个文件夹中点击右键均可看到"**git bash here**"这个命令行工具
+![图片](https://img-blog.csdnimg.cn/20200828210932769.png#pic_center)
+## 如何开始使用Git这个终端呢
+- 打开**git bash here** 这个终端后有个命令叫**git init**（初始化本地仓库-本质）：会在你的项目根目录中新建一个隐藏文件夹(.git)
+**注：如果项目中有.git这个文件夹就不需要我们手动去初始化**
