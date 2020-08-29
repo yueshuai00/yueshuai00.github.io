@@ -31,17 +31,17 @@ Git，全称是分布式版本控制系统,可以有效、高速的处理从很�
 - **git branch 分支名** 新建分支
 # 三、注册一个GitHub账号
 打开[GitHub官网](http://github.com)
-[注册界面](https://img-blog.csdnimg.cn/20200828213412993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
+![注册界面](https://img-blog.csdnimg.cn/20200828213412993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
 ## 配置SSH公钥
 **作用：为了免密码登陆，但也得需要一个“凭证”（电脑凭证：指代你的这台正在使用的电脑）在命令行中输入以下命令**
 1. 首先查看你的电脑中是否有这个凭证
 >cat ~/.ssh/id_rsa.pub
 2. 生成该凭证
->ssh-keygen -t rsa -C "输入你的邮箱
+>ssh-keygen -t rsa -C "输入你的邮箱"
 3. 生成之后获取凭证
 >cat ~/.ssh/id_rsa.pub
 4. 把生成的凭证添加到**GitHub**里面
-[添加界面](https://img-blog.csdnimg.cn/202008291415018.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
+![添加界面](https://img-blog.csdnimg.cn/202008291415018.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
 # 四、GitHub Pages
 **GitHub这个网站中的一些功能**
 1. 让一个小白能够快速的认知代码，感受到代码给你带来的快乐
@@ -50,16 +50,16 @@ Git，全称是分布式版本控制系统,可以有效、高速的处理从很�
 ## 博客页面的一个主题网站
 1. [http://jekyllthemes.org](http://jekyllthemes.org)
 2.  进去之后呢选择一个主题点击**homepage**这个按钮（这是点击了homepage进去之后显示的界面）
-[图片](https://img-blog.csdnimg.cn/20200829144259225.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
+![图片](https://img-blog.csdnimg.cn/20200829144259225.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
 3. 接下来点击以上图片中右上角的那个**fork**按钮（把这个项目复制到我们自己的仓库中来）
-[图片](https://img-blog.csdnimg.cn/20200829155339497.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
+![图片](https://img-blog.csdnimg.cn/20200829155339497.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
 4. **fork**过来之后需要点击**Settings**这个按钮把仓库名字改成你自己的**用户名.github.io**
-[图片](https://img-blog.csdnimg.cn/20200829155554673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
+![图片](https://img-blog.csdnimg.cn/20200829155554673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
 # 五、把远程仓库代码克隆到本地
 1. 复制SSH里面的链接
-[图片](https://img-blog.csdnimg.cn/20200829161945636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
+![图片](https://img-blog.csdnimg.cn/20200829161945636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
 2.在我们的项目根目录中打开命令行工具**Git Bash Here**执行一句话 
-[图片](https://img-blog.csdnimg.cn/20200829162026258.png#pic_center)
+![图片](https://img-blog.csdnimg.cn/20200829162026258.png#pic_center)
 
 <br>以上步骤呢是已经创建好了自己的博客项目远程版本库了
 
