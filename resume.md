@@ -8,4 +8,5 @@ subtitle: 感谢关注
 <br>
 
 ### 个人概述
-``` Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed porttitor mi. In bibendum tortor nec massa finibus, id ultricies urna pulvinar. Sed congue blandit est non sagittis. In eget lobortis ipsum. Quisque id nisl nisl. Donec nec dapibus diam. Donec vel euismod nisi.  ```  
+本人是一个在校生，也是一个正在努力学习前端的小白。
+<br>本人声明：注此篇博客只为了记载本人的学习过程，不可作为任何用途
