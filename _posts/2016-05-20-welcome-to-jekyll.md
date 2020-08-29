@@ -58,9 +58,9 @@ Git，全称是分布式版本控制系统,可以有效、高速的处理从很�
 # 五、把远程仓库代码克隆到本地
 1. 复制SSH里面的链接
 ![图片](https://img-blog.csdnimg.cn/20200829161945636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center)
-2.在我们的项目根目录中打开命令行工具**Git Bash Here**执行一句话 
+2. 在我们的项目根目录中打开命令行工具**Git Bash Here**执行一句话 
 ![图片](https://img-blog.csdnimg.cn/20200829162026258.png#pic_center)
 
 <br>以上步骤呢是已经创建好了自己的博客项目远程版本库了
 
-<br>此文章原链接[https://editor.csdn.net/md/?articleId=108287483#Git_7](https://editor.csdn.net/md/?articleId=108287483#Git_7)
+<br>此文章原链接[https://blog.csdn.net/weixin_46323637/article/details/108287483](https://blog.csdn.net/weixin_46323637/article/details/108287483)
