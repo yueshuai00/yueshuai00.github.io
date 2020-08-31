@@ -118,7 +118,7 @@ categories: [""]
 
 > cat ~/.ssh/id_rsa.pub
 
- 4. 把生成的凭证添加到github里面
+4. 把生成的凭证添加到github里面
 
 4.1）首先在个人中心点击`settings`进入到个人界面下拉选择`SSH and GPG keys`在右上角有个叫`New SSH keys`（新的密钥）点击进去添加`SSH`密钥
 
@@ -288,5 +288,8 @@ git config ：当你是第一次安装git，并且第一次提交的时候会提
 git config --global user.name "名字" 设置你的名字
 git config --global user.email "邮箱" 设置你的邮箱
 ```
+
+至此，修改文件代码并提交本地版本库工作完成，网站已可正常访问：
+本文blog访问地址：[https://yueshuai00.github.io/](https://yueshuai00.github.io/)
 
 <br>此文章原链接[https://blog.csdn.net/weixin_46323637/article/details/108287483](https://blog.csdn.net/weixin_46323637/article/details/108287483)
