@@ -1,0 +1,357 @@
+I"�N<h1 id="一git是什么">一、Git是什么</h1>
+
+<h2 id="11-git简介">1.1 Git简介</h2>
+
+<ul>
+  <li>
+    <p>团队协作开发（中转站：GitHub：全球最大的男性交友网站）</p>
+  </li>
+  <li>
+    <p>分支（本地/远程）管理</p>
+  </li>
+  <li>
+    <p>GIT，全称是分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。每个开发者可以通过克隆 git clone，在本地机器上拷贝一个完整的Git仓库。
+<img src="https://img-blog.csdnimg.cn/20200830233909569.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center" alt="picture" /></p>
+  </li>
+</ul>
+
+<h2 id="12-git作用">1.2 Git作用</h2>
+
+<ul>
+  <li>代码管理</li>
+</ul>
+
+<h2 id="13-安装git">1.3 安装Git</h2>
+
+<ul>
+  <li>
+    <p>点击此链接<a href="https://git-scm.com/">https://git-scm.com/</a>进入git官网下载git</p>
+  </li>
+  <li>
+    <p>点击Downloads选择你所需要的版本进行下载
+<img src="https://img-blog.csdnimg.cn/20200828210639732.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center" alt="picture" /></p>
+  </li>
+</ul>
+
+<h2 id="14-如何开始使用git">1.4 如何开始使用Git</h2>
+
+<ul>
+  <li>下载安装之后，你会在任意一个文件夹中 右键 均可以看到git bash here在改文件夹下打开终端（自带命令行工具）</li>
+</ul>
+
+<blockquote>
+  <p>注：如果此时马上要在这个空白文件夹内开始一个项目，需要在 <code class="language-plaintext highlighter-rouge">git bash here</code> 命令行内先 <code class="language-plaintext highlighter-rouge">git init</code> 初始化本项目文件夹后（即本地仓库）再开始项目。
+如下图所示：
+<img src="https://img-blog.csdnimg.cn/2020083023480620.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center" alt="picture" /></p>
+</blockquote>
+
+<h2 id="15-git常用命令介绍">1.5 Git常用命令介绍</h2>
+
+<h3 id="151-初始化本地仓库">1.5.1 初始化本地仓库</h3>
+
+<blockquote>
+  <p>有个命令叫 <code class="language-plaintext highlighter-rouge">git init</code> （初始化本地仓库—本质）：在你的项目根目录中新建了一个隐藏文件夹（<code class="language-plaintext highlighter-rouge">.git</code>）</p>
+</blockquote>
+
+<p><strong>注：如果项目中有.git这个文件夹就不需要我们手动去初始化</strong></p>
+
+<h3 id="152-本地的代码如何提交到远程网站中">1.5.2 本地的代码如何提交到远程网站中</h3>
+
+<ul>
+  <li><strong>git add .</strong> （将本地代码推到本地代码中的暂存区）</li>
+</ul>
+
+<blockquote>
+  <p>注：删除文件后需要 <code class="language-plaintext highlighter-rouge">git add -A</code>, 光 <code class="language-plaintext highlighter-rouge">git add.</code> 不行，区别如下：
+<code class="language-plaintext highlighter-rouge">git add -A</code> 保存所有的修改 <code class="language-plaintext highlighter-rouge">git add .</code> 保存新的添加和修改，但是不包括删除 <code class="language-plaintext highlighter-rouge">git add -u</code> 保存修改和删除，但是不包括新建文件。 所以默认使用<code class="language-plaintext highlighter-rouge">git add -A</code> 就行。</p>
+</blockquote>
+
+<ul>
+  <li><strong>git commit -m “提交信息”</strong> （将暂存区的代码正式提交到本地版本库）</li>
+</ul>
+
+<blockquote>
+  <p>注：此命令会将 <code class="language-plaintext highlighter-rouge">git add .</code> 存入暂存区的修改文件提交至本地仓库中，若文件未添加至暂存区，则提交时不会提交任何修改。</p>
+</blockquote>
+
+<ul>
+  <li>**git push <远程地址> <本地分支名>&lt;:&gt;<远程分支名>**（将本地版本库中的代码提交到远程版本库）</远程分支名></本地分支名></远程地址></li>
+</ul>
+
+<blockquote>
+  <p>注： 上面命令表示，将本地的 <code class="language-plaintext highlighter-rouge">master</code> 分支推送到 <code class="language-plaintext highlighter-rouge">origin</code> 主机的 <code class="language-plaintext highlighter-rouge">master</code> 分支。如果 <code class="language-plaintext highlighter-rouge">master</code> 不存在，则会被新建。</p>
+</blockquote>
+
+<h3 id="153-远程的代码如何下载合并到本地中">1.5.3 远程的代码如何下载/合并到本地中</h3>
+
+<p>当你本地还没有项目代码的时候，需要完整的下载一个远程项目，要用到此命令：</p>
+
+<ul>
+  <li><strong>git clone -b 远程分支名 远程地址</strong></li>
+</ul>
+
+<blockquote>
+  <p>注：如果不加 <code class="language-plaintext highlighter-rouge">-b</code> 也就是不指定哪个分支会默认 <code class="language-plaintext highlighter-rouge">master</code> 分支）</p>
+</blockquote>
+
+<p>合并某个拉取下来的分支中的代码：</p>
+
+<ul>
+  <li><strong>git merge 指定远程分支</strong></li>
+</ul>
+
+<p>拉取远程版本库中所有有变化的分支中的内容：</p>
+
+<ul>
+  <li><strong>git fetch</strong></li>
+</ul>
+
+<h3 id="154-本地如何进行分支管理">1.5.4 本地如何进行分支管理</h3>
+
+<p>查看本地有哪些分支：</p>
+
+<ul>
+  <li><strong>git branch</strong></li>
+</ul>
+
+<p>切换分支：</p>
+
+<ul>
+  <li><strong>git checkout 分支名</strong></li>
+</ul>
+
+<p>新建分支：</p>
+
+<ul>
+  <li><strong>git branch 分支名</strong></li>
+</ul>
+
+<h1 id="二注册githaub">二、注册GitHaub</h1>
+
+<h2 id="21-注册github账号">2.1 注册GitHub账号</h2>
+
+<p>1）打开<a href="http://github.com">http://github.com</a>进入到github这个界面进行注册</p>
+
+<p>2）点击<code class="language-plaintext highlighter-rouge">Sign up</code>切换到注册页,填写好注册信息后点击 <code class="language-plaintext highlighter-rouge">Sign up for GitHub</code> 注册</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831002606825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<h2 id="22-配置ssh">2.2 配置SSH</h2>
+<p><strong>作用：为了免密码登陆，但也得需要一个“凭证”（电脑凭证：指代你的这台正在使用的电脑）在命令行中输入以下命令</strong></p>
+
+<ol>
+  <li>首先查看你的电脑中是否有这个凭证</li>
+</ol>
+
+<blockquote>
+  <p>cat ~/.ssh/id_rsa.pub</p>
+</blockquote>
+
+<ol>
+  <li>生成该凭证</li>
+</ol>
+
+<blockquote>
+  <p>ssh-keygen -t rsa -C “输入你的邮箱</p>
+</blockquote>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>注：此邮箱为你在Github注册时的邮箱（仅作为标识）
+</code></pre></div></div>
+
+<ol>
+  <li>生成之后获取凭证</li>
+</ol>
+
+<blockquote>
+  <p>cat ~/.ssh/id_rsa.pub</p>
+</blockquote>
+
+<ol>
+  <li>把生成的凭证添加到github里面</li>
+</ol>
+
+<p>4.1）首先在个人中心点击<code class="language-plaintext highlighter-rouge">settings</code>进入到个人界面下拉选择<code class="language-plaintext highlighter-rouge">SSH and GPG keys</code>在右上角有个叫<code class="language-plaintext highlighter-rouge">New SSH keys</code>（新的密钥）点击进去添加<code class="language-plaintext highlighter-rouge">SSH</code>密钥</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831004758735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<h1 id="三github-pages">三、GitHub Pages</h1>
+
+<h2 id="31-什么是github-pages">3.1 什么是GitHub Pages</h2>
+
+<p>GitHub的超高人气和强大的功能，但是对于一个新手来说，看到一大堆源码，只会让人头晕脑涨，不知何处入手。他希望看到的是，一个简明易懂的网页，说明每一步应该怎么做。因此，github就设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
+
+<p>GitHub Pages的一些功能：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 让一个小白能够快速的认知代码，感受到代码给你带来的快乐
+2. 程序员的福利--用最简单的语言上线自己的一个项目
+3. 它提供了我们一个域名，github的服务器中的一部分空间
+</code></pre></div></div>
+<p><strong>github提供模板，允许站内生成网页，也允许用户自己编写网页，然后上传。有意思的是，这种上传并不是单纯的上传，而是会经过Jekyll程序的再处理。</strong></p>
+
+<h2 id="32-博客页面的一个主题网站jekyll">3.2 博客页面的一个主题网站（Jekyll）</h2>
+
+<h3 id="321-jekyll是什么">3.2.1 jekyll是什么</h3>
+
+<p>jekyll是一个简单的免费的Blog生成工具。是一个生成静态网页的工具，不需要数据库支持。但是可以配合第三方服务。最关键的是jekyll可以免费部署在Github上，而且可以绑定自己的域名</p>
+
+<p>好处：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 免费，无限流量。
+2. 享受git的版本管理功能，不用担心文章遗失。
+3. 你只要用自己喜欢的编辑器写文章就可以了，其他事情一概不用操心，都由GitHub处理。
+</code></pre></div></div>
+<p>缺点：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 有一定技术门槛，你必须要懂一点git和网页开发；
+2. 生成的是静态网页，添加动态功能必须使用外部服务，比如评论功能就只能用disqus。
+3. 不适合大型网站，因为没有用到数据库，每运行一次都必须遍历全部的文本文件，网站越大，生成时间越长。
+</code></pre></div></div>
+<h3 id="322-jellky配置">3.2.2 jellky配置</h3>
+
+<p>_config.yml文件：这是需要使用者进行自定义的文件，项目中会进行读取。</p>
+
+<h2 id="33-创建博客主题网站">3.3 创建博客主题网站</h2>
+
+<h3 id="331-创建博客页面">3.3.1 创建博客页面</h3>
+
+<p>1）点击 <a href="http://jekyllthemes.org/">http://jekyllthemes.org</a>进入到jekyll页面选择一个自己喜欢的模板，在点击<code class="language-plaintext highlighter-rouge">HomePage</code>按钮进入<code class="language-plaintext highlighter-rouge">GitHub</code>项目仓库</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831012554853.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>2）点击右上角的<code class="language-plaintext highlighter-rouge">fork</code>按钮（把这个项目复制到我们自己的仓库中来）</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831012811526.png#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>3）fork之后修改仓库名</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831013637335.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<h3 id="332-访问博客页面">3.3.2 访问博客页面</h3>
+
+<p>通过上面的操作，就可以在浏览器访问博客页面啦~</p>
+
+<p>例如，访问我新建的博客页面：<a href="https://yueshuai00.github.io/">https://yueshuai00.github.io/</a></p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831014353818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<h3 id="333把远程仓库代码克隆到本地">3.3.3把远程仓库代码克隆到本地</h3>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831015256649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" />
+在命令行窗口里paste（粘贴），再跟上一个文件夹名称，回车即开始克隆</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831023629538.png#pic_center" alt="在这里插入图片描述" /></p>
+
+<h3 id="334-html-css-的使用">3.3.4 HTML CSS 的使用</h3>
+
+<h4 id="1html的结构">1）HTML的结构</h4>
+
+<p>HTML不属于一种标准的图灵完备语言（图灵完备语言：可以参与任何情况下的计算的语言）</p>
+<ul>
+  <li>HTML仅仅是一种标记，这标记不是符号，是被一组尖括号包裹着的英文单词,这样的一组标记称之为标签。基本格式如下：</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;标签名</span> <span class="na">属性名1=</span><span class="s">“属性值”</span> <span class="na">属性名2=</span><span class="s">“属性值”</span><span class="nt">&gt;</span>内容<span class="nt">&lt;/标签名&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>HTML的属性————根据不同的属性设置可以展示出不同的效果
+除了常见的双标签外还有一些标签，采用单标签的形式，例如 ：<code class="language-plaintext highlighter-rouge">&lt;meta /&gt;</code></li>
+</ul>
+
+<h4 id="2网络请求的初步认知">2）网络请求的初步认知</h4>
+
+<p>请求地址：任何一个请求”都需要“完整URL” 
+例如：<code class="language-plaintext highlighter-rouge">http://www.w3school.com.cn:80/html/index.asp</code></p>
+
+<ul>
+  <li>协议
+ 包括：http https ws wss ftp sftp rtmp….等等</li>
+</ul>
+
+<h5 id="1-协议双方">1） 协议双方</h5>
+
+<ul>
+  <li>
+    <p>客户端：发送请求的软件（例如浏览器：谷歌浏览器 火狐浏览器 360 qq 。。。。）</p>
+  </li>
+  <li>
+    <p>服务端：接收并处理请求的软件（webServer：nginx apache tomcat。。。。）</p>
+  </li>
+</ul>
+
+<h5 id="2-协议的内容">2） 协议的内容</h5>
+
+<ul>
+  <li>协议的内容：处理请求的方式</li>
+</ul>
+
+<h5 id="3域名">3）域名</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	1）服务器 ：一台电脑
+	2）IP地址 ：任何一台联网的电脑都有一个IP——在浩瀚的网络中你的电脑的一个唯一标示
+	3）IP的别名（域名） ：一般由三段组成（你花钱购买的是“名+后缀”）
+</code></pre></div></div>
+
+<h5 id="4端口">4）端口</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    1）作用 ：是为一个软件“运行”提供的一个入口
+    2）为webServer的运行提供的一个入口
+    3）如果你发送的是https请求，那么就会拼接上:443
+    4）如果你发送的是http请求，那么就会拼接上:80
+</code></pre></div></div>
+
+<h5 id="5地址">5）地址</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    1）网络请求的本质是：打开远程电脑中的一个文件，读取其中的内容并返回
+    2）你要打开的那个文件的路径：
+	        绝对路径：相对于根文件夹而言的路径
+	        相对路径：相对于当前文件夹而言的路径
+	      参照物：网站根目录（是可以自定义的）
+</code></pre></div></div>
+
+<h5 id="6参数">6）参数</h5>
+
+<p>访问网页中所需要的一些数据</p>
+
+<p>在URL地址中，<code class="language-plaintext highlighter-rouge">?</code>后面是参数，多个参数之间用&amp;链接。例如：</p>
+
+<p>https://www.baidu.com:443/s<code class="language-plaintext highlighter-rouge">?</code>ie=utf-8<code class="language-plaintext highlighter-rouge">&amp;</code>f=8<code class="language-plaintext highlighter-rouge">&amp;</code>rsv_bp=1<code class="language-plaintext highlighter-rouge">&amp;</code>tn=monline_4_dg<code class="language-plaintext highlighter-rouge">&amp;</code>wd=2325</p>
+
+<h3 id="335-在自己喜欢的编辑器中修改clone下来的模板并发布">3.3.5 在自己喜欢的编辑器中修改clone下来的模板并发布</h3>
+
+<p>1）打开<code class="language-plaintext highlighter-rouge">Git Bash Here</code>这个终端输入以下命令，如图所示：</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831153221227.png#pic_center" alt="在这里插入图片描述" />
+注意：<code class="language-plaintext highlighter-rouge">ls</code>是查看当前目录下的文件，当前目录中的<code class="language-plaintext highlighter-rouge">blog</code>是<code class="language-plaintext highlighter-rouge">clone</code> 远程仓库时，在项目根目录下创建的文件夹，里面存放有<code class="language-plaintext highlighter-rouge">clone</code>下来的网站文件。</p>
+
+<p>2）<code class="language-plaintext highlighter-rouge">cd blog</code> 进入到此文件夹中，如图所示：</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831153940401.png#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>3）由于修改了仓库中的代码，输入 <code class="language-plaintext highlighter-rouge">git status</code> 点击回车，就可以看到修改过的_comfig.yml文件变成了红色，表示还没有推送到暂存区</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831154611608.png#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>4）输入以下两行代码你就会发现修改的_comfig.yml文件变成了绿色，这就表示已经推送到了暂存区，但是没有正式提交到本地版本库，如图所示：</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831155029361.png#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>5）执行以下命令提交到本地版本库，如图所示：</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20200831155656489.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>注意：<code class="language-plaintext highlighter-rouge">fourth push</code> 只是作为此次提交的备注信息，可随便填写！ 
+<code class="language-plaintext highlighter-rouge">origin</code> 是下图图片中所复制的别名（也可以把origin修改成下图复制中的内容）<img src="https://img-blog.csdnimg.cn/20200831015256649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjMyMzYzNw==,size_16,color_FFFFFF,t_70#pic_center#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>6）如果你是第一次使用，需运行如下命令</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config ：当你是第一次安装git，并且第一次提交的时候会提示你执行两行命令。
+git config <span class="nt">--global</span> user.name <span class="s2">"名字"</span> 设置你的名字
+git config <span class="nt">--global</span> user.email <span class="s2">"邮箱"</span> 设置你的邮箱
+</code></pre></div></div>
+
+<p>至此，修改文件代码并提交本地版本库工作完成，网站已可正常访问：
+本文blog访问地址：<a href="https://yueshuai00.github.io/">https://yueshuai00.github.io/</a></p>
+
+<p><br />此文章原链接<a href="https://blog.csdn.net/weixin_46323637/article/details/108287483">https://blog.csdn.net/weixin_46323637/article/details/108287483</a></p>
+:ET
